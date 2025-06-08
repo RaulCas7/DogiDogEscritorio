@@ -122,6 +122,8 @@ DogiDogEscritorio/
 
 ## 💖 Créditos
 
-Desarrollado con cariño y pasión por los perritos.  
-Con una estética cute y funcional, para que la gestión sea tan encantadora como efectiva.  
+Desarrollado por Raúl Casas Gómez con cariño y pasión por las mascotas y asi ayudarlas a vivir en un entorno más seguro.  
+Con una estética linda y funcional, para que la gestión sea tan encantadora como efectiva y sea fácil para los usuarios.  
 **¡Gracias por usar DogiDogEscritorio! 🐕✨**
+
+© 2025 DogiDogEscritorio. Todos los derechos reservados.
