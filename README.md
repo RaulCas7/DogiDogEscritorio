@@ -1,8 +1,8 @@
 
 # 🐶 DogiDogEscritorio
 
-**DogiDogEscritorio** es una aplicación de escritorio desarrollada en **C# con Windows Forms**. Forma parte del ecosistema DogiDog y está centrada en la gestión administrativa de usuarios, razas de perros, incidencias, notificaciones, valoraciones y empleados.  
-Cuenta con una interfaz visual adorable, colorida y profesional, con una estética "cute" que hace que sea un placer trabajar con ella. 🐾
+**DogiDogEscritorio** es una aplicación de escritorio desarrollada en **C# con Windows Forms**. Forma parte del ecosistema de la aplicación DogiDog realizada por el alumno Raúl Casas Gómez para el proyecto de fin de ciclo en el Miguel Herrero Pereda y está centrada en la gestión administrativa de usuarios, razas de perros, incidencias, notificaciones, valoraciones y empleados.  
+Cuenta con una interfaz visual adorable, colorida y profesional, con una estética bonita que hace que sea un placer trabajar con ella. 🐾
 
 ---
 
@@ -53,15 +53,14 @@ Cuenta con una interfaz visual adorable, colorida y profesional, con una estéti
 ```
 DogiDogEscritorio/
 │
-├── Forms/
-│   ├── LoginForm.cs
-│   ├── RazasForm.cs
-│   ├── NuevaIncidenciaForm.cs
-│   ├── NotificacionesForm.cs
-│   ├── ValoracionesForm.cs
-│   ├── CuentasForm.cs
-│   ├── EditarEmpleadoForm.cs
-│   └── DogiBotForm.cs
+├── LoginForm.cs
+├── RazasForm.cs
+├── NuevaIncidenciaForm.cs
+├── NotificacionesForm.cs
+├── ValoracionesForm.cs
+├── CuentasForm.cs
+├── EditarEmpleadoForm.cs
+├── DogiBotForm.cs
 │
 ├── Models/
 │   ├── Usuario.cs
@@ -69,11 +68,11 @@ DogiDogEscritorio/
 │   ├── Raza.cs
 │   ├── Incidencia.cs
 │   ├── Valoracion.cs
-│   ├── Notificacion.cs
-│   └── EntradaBot.cs
+│   ├── Notificacion.cs   
+│   ├── Sesion.cs
+│   ├── Tarea.cs
+│   └── Pregunta.cs
 │
-├── Services/
-│   └── Servicios para conexión con API REST
 │
 └── Program.cs
 ```
@@ -118,7 +117,7 @@ DogiDogEscritorio/
 - Modo oscuro 🌙.
 - Estadísticas avanzadas.
 - Multilenguaje (es/en).
-
+- Permitir añadir clientes a la aplicación para realizar incidencias
 ---
 
 ## 💖 Créditos
