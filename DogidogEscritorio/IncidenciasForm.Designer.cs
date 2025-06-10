@@ -72,9 +72,9 @@ namespace DogiDogEscritorio
             this.cmbEstadoFiltro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEstadoFiltro.Items.AddRange(new object[] {
             "Todos",
-            "Abierto",
-            "En progreso",
-            "Cerrado"});
+            "Abierta",
+            "EnProgreso",
+            "Cerrada"});
             this.cmbEstadoFiltro.Location = new System.Drawing.Point(200, 30);
             this.cmbEstadoFiltro.Name = "cmbEstadoFiltro";
             this.cmbEstadoFiltro.Size = new System.Drawing.Size(130, 24);

@@ -14,6 +14,7 @@ namespace DogiDogEscritorio
     private System.Windows.Forms.TextBox txtPassword;
     private System.Windows.Forms.Button btnGuardar;
     private System.Windows.Forms.Button btnResetPassword;
+    private Panel panelPassword;
 
         protected override void Dispose(bool disposing)
     {
@@ -21,17 +22,21 @@ namespace DogiDogEscritorio
         base.Dispose(disposing);
     }
 
-    private void InitializeComponent()
-    {
+        private void InitializeComponent()
+        {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditarEmpleadoForm));
             this.lblTitulo = new System.Windows.Forms.Label();
             this.panel = new System.Windows.Forms.FlowLayoutPanel();
-            this.lblPassword = new System.Windows.Forms.Label();
-            this.txtPassword = new System.Windows.Forms.TextBox();
+
+            // Crear campos visuales reutilizables
+            var panelPuesto = CrearCampo("Puesto:", out this.txtPuesto);
+            var panelAdmin = CrearCheckbox("¿Es administrador?", out this.chkAdmin);
+            panelPassword = CrearCampo("Nueva Contraseña:", out this.txtPassword);
+
+            // Crear botones
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnResetPassword = new System.Windows.Forms.Button();
-            this.panel.SuspendLayout();
-            this.SuspendLayout();
+
             // 
             // lblTitulo
             // 
@@ -44,14 +49,11 @@ namespace DogiDogEscritorio
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "✏️ Editar Empleado";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+
             // 
             // panel
             // 
             this.panel.AutoScroll = true;
-            this.panel.Controls.Add(this.lblPassword);
-            this.panel.Controls.Add(this.txtPassword);
-            this.panel.Controls.Add(this.btnGuardar);
-            this.panel.Controls.Add(this.btnResetPassword);
             this.panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.panel.Location = new System.Drawing.Point(0, 0);
@@ -59,20 +61,15 @@ namespace DogiDogEscritorio
             this.panel.Padding = new System.Windows.Forms.Padding(20, 60, 20, 20);
             this.panel.Size = new System.Drawing.Size(432, 353);
             this.panel.TabIndex = 1;
-            // 
-            // lblPassword
-            // 
-            this.lblPassword.Location = new System.Drawing.Point(23, 60);
-            this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(100, 23);
-            this.lblPassword.TabIndex = 0;
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.Location = new System.Drawing.Point(23, 86);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(100, 22);
-            this.txtPassword.TabIndex = 1;
+            this.panel.WrapContents = false;
+
+            // Añadir los paneles ordenadamente
+            this.panel.Controls.Add(panelPuesto);
+            this.panel.Controls.Add(panelAdmin);
+            this.panel.Controls.Add(panelPassword);
+            this.panel.Controls.Add(this.btnGuardar);
+            this.panel.Controls.Add(this.btnResetPassword);
+
             // 
             // btnGuardar
             // 
@@ -80,13 +77,12 @@ namespace DogiDogEscritorio
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(23, 114);
-            this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(250, 40);
             this.btnGuardar.TabIndex = 2;
             this.btnGuardar.Text = "💾 Guardar Cambios";
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+
             // 
             // btnResetPassword
             // 
@@ -94,14 +90,13 @@ namespace DogiDogEscritorio
             this.btnResetPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnResetPassword.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.btnResetPassword.ForeColor = System.Drawing.Color.White;
-            this.btnResetPassword.Location = new System.Drawing.Point(23, 160);
-            this.btnResetPassword.Name = "btnResetPassword";
             this.btnResetPassword.Size = new System.Drawing.Size(250, 40);
             this.btnResetPassword.TabIndex = 3;
             this.btnResetPassword.Text = "🔄 Resetear Contraseña";
             this.btnResetPassword.UseVisualStyleBackColor = false;
             this.btnResetPassword.Visible = false;
             this.btnResetPassword.Click += new System.EventHandler(this.btnResetPassword_Click);
+
             // 
             // EditarEmpleadoForm
             // 
@@ -113,13 +108,9 @@ namespace DogiDogEscritorio
             this.Name = "EditarEmpleadoForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Editar Empleado";
-            this.panel.ResumeLayout(false);
-            this.panel.PerformLayout();
-            this.ResumeLayout(false);
+        }
 
-    }
-
-    private System.Windows.Forms.Panel CrearCampo(string label, out System.Windows.Forms.TextBox textbox)
+        private System.Windows.Forms.Panel CrearCampo(string label, out System.Windows.Forms.TextBox textbox)
     {
         var panel = new System.Windows.Forms.Panel() { Width = 400, Height = 60 };
         var lbl = new System.Windows.Forms.Label()

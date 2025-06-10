@@ -32,7 +32,6 @@ namespace DogiDogEscritorio
 
             Load += EditarEmpleadoForm_Load;
         }
-
         private async void EditarEmpleadoForm_Load(object sender, EventArgs e)
         {
             try
@@ -55,22 +54,19 @@ namespace DogiDogEscritorio
 
                     if (esMismoUsuario)
                     {
-                        lblPassword.Visible = true;
-                        txtPassword.Visible = true;
+                        panelPassword.Visible = true;
 
                         // Placeholder simulado con asteriscos
                         txtPassword.ForeColor = Color.Gray;
                         txtPassword.Text = "Escribe tu nueva contraseña";
                         txtPassword.UseSystemPasswordChar = false;
 
-                        // Suscribir eventos con métodos nombrados
                         txtPassword.GotFocus += TxtPassword_GotFocus;
                         txtPassword.LostFocus += TxtPassword_LostFocus;
                     }
                     else
                     {
-                        lblPassword.Visible = false;
-                        txtPassword.Visible = false;
+                        panelPassword.Visible = false;
                     }
 
                     btnResetPassword.Visible = esAdministradorLogueado && !esMismoUsuario;

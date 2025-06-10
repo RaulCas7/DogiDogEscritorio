@@ -75,10 +75,8 @@ namespace DogiDogEscritorio
         {
             InitializeComponent();
 
-            cmbEstadoFiltro.Items.AddRange(new object[] { "Todos", "ABIERTO", "EN_PROGRESO", "CERRADO" });
             cmbEstadoFiltro.SelectedIndex = 0;
 
-            cmbPrioridadFiltro.Items.AddRange(new object[] { "Todas", "BAJA", "MEDIA", "ALTA" });
             cmbPrioridadFiltro.SelectedIndex = 0;
 
             cmbEstadoFiltro.SelectedIndexChanged += (s, e) => LoadIncidencias();
